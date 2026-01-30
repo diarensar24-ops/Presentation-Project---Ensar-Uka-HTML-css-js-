@@ -1,0 +1,1 @@
+fetch("https://dummyjson.com/users").then((data) => data.json()).then((data) => console.log(data))

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css.css">
+    
+    <script src="fetch.js"></script>
+    <script>
+window.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".v-bar").forEach((bar, i) => {
+        const h = bar.dataset.height;
+        setTimeout(() => {
+            bar.style.height = h + "%";
+        }, i * 120);
+    });
+});
+</script>
+<script src="app.js"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <header class="navbar">
+            <h1>Ensari Analytics</h1>
+            <span class="user">Hello Ensar!</span>
+        </header>
+
+        <aside class="sidebar">
+            <a href="link">🔧 Settings</a>
+            <a href="link">📊 Analytics</a>
+            <a href="link">📝 Overview</a>
+            <a href="link">💵 Sales</a>
+            <a href="link">💼 Inventory</a>
+        </aside>
+
+        <main>
+            <div class="card">
+                <h3>Today's Sales</h3>
+                <span class="value">$4,870 &#8226;</span>
+                <small class="green1">+8% vs yesterday</small>
+
+                <div class="v-chart full">
+                    <div class="v-bar" data-height="30" data-label="M"></div>
+                    <div class="v-bar" data-height="50" data-label="T"></div>
+                    <div class="v-bar" data-height="45" data-label="W"></div>
+                    <div class="v-bar" data-height="65" data-label="T"></div>
+                    <div class="v-bar" data-height="50" data-label="F"></div>
+                     <div class="v-bar" data-height="62" data-label="S"></div>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Support Tickets</h3>
+                <span class="value">15 &#8226;</span>
+                <small class="green2">9 open, 6 closed</small>
+
+                <div class="v-chart full">
+                    <div class="v-bar" data-height="50" data-label="M"></div>
+                    <div class="v-bar" data-height="60" data-label="T"></div>
+                    <div class="v-bar" data-height="50" data-label="W"></div>
+                    <div class="v-bar" data-height="55" data-label="T"></div>
+                    <div class="v-bar" data-height="64" data-label="F"></div>
+                    <div class="v-bar" data-height="55" data-label="S"></div>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Active Users</h3>
+                <span class="value">15,009 &#8226;</span>
+                <small class="red">-3% vs yesterday</small>
+
+                <div class="v-chart full">
+                    <div class="v-bar" data-height="30" data-label="M"></div>
+                    <div class="v-bar" data-height="40" data-label="T"></div>
+                    <div class="v-bar" data-height="45" data-label="W"></div>
+                    <div class="v-bar" data-height="43" data-label="T"></div>
+                    <div class="v-bar" data-height="50" data-label="F"></div>
+                    <div class="v-bar" data-height="47" data-label="S"></div>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Conversion Rate</h3>
+                <span class="value">4.6% &#8226;</span>
+                <small class="green3">+0.2%</small>
+
+                <div class="v-chart full">
+                    <div class="v-bar" data-height="30" data-label="M"></div>
+                    <div class="v-bar" data-height="60" data-label="T"></div>
+                    <div class="v-bar" data-height="45" data-label="W"></div>
+                    <div class="v-bar" data-height="75" data-label="T"></div>
+                    <div class="v-bar" data-height="64.8" data-label="F"></div>
+                    <div class="v-bar" data-height="65" data-label="S"></div>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Assets</h3>
+                <span class="value">27 Assets sold &#8226;</span>
+                <small class="green4">5 Assets more vs yesterday</small>
+
+                <div class="v-chart full">
+                    <div class="v-bar" data-height="35" data-label="M"></div>
+                    <div class="v-bar" data-height="45" data-label="T"></div>
+                    <div class="v-bar" data-height="55" data-label="W"></div>
+                    <div class="v-bar" data-height="45" data-label="T"></div>
+                    <div class="v-bar" data-height="20" data-label="F"></div>
+                    <div class="v-bar" data-height="30" data-label="S"></div>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Sponsors</h3>
+                <span class="value">2 new Sponsors &#8226;</span>
+                <small class="green4">def corp. <small class="value">&</small> monsters inc.</small>
+
+                <div class="v-chart full">
+                    <div class="v-bar" data-height="30" data-label="M"></div>
+                    <div class="v-bar" data-height="60" data-label="T"></div>
+                    <div class="v-bar" data-height="45" data-label="W"></div>
+                    <div class="v-bar" data-height="45" data-label="T"></div>
+                    <div class="v-bar" data-height="50" data-label="F"></div>
+                    <div class="v-bar" data-height="65" data-label="S"></div>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Sale Success Rate</h3>
+                <span class="value">38 % succes rate &#8226;</span>
+                <small class="red">-5% vs yesterday</small>
+
+                <div class="v-chart full">
+                    <div class="v-bar" data-height="30" data-label="M"></div>
+                    <div class="v-bar" data-height="60" data-label="T"></div>
+                    <div class="v-bar" data-height="45" data-label="W"></div>
+                    <div class="v-bar" data-height="75" data-label="T"></div>
+                    <div class="v-bar" data-height="50" data-label="F"></div>
+                    <div class="v-bar" data-height="65" data-label="S"></div>
+                </div>
+            </div>
+        </main>
+
+            <section class="extra">
+                <h2>Recent Activity</h2>
+                
+            </section>
+
+            <footer>
+                <small>&copy; 2025 Cali Corp. &#8226; Built with pure CSS Grid. Authorized by <em>Ensar Uka.</em></small>  
+            </footer>
+    </div>
+</body>
+</html>
